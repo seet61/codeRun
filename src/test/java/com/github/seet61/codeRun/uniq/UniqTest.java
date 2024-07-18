@@ -19,4 +19,18 @@ public class UniqTest {
         int num = Uniq.test(parts);
         assertEquals(5, num);
     }
+
+    @Test
+    public void test2() throws IOException {
+        List<String> parts = Arrays.asList("1 2 3 4 4".split(" "));
+        int num = Uniq.test(parts);
+        assertEquals(3, num);
+    }
+
+    @Test
+    public void test3() throws IOException {
+        List<String> parts = Arrays.asList("9 3 10 5 7 6 4 1 2 8".split(" "));
+        int num = Uniq.test(parts);
+        assertEquals(10, num);
+    }
 }
